@@ -17,3 +17,16 @@ Use the NoDate base file. Draw the month and year as white serif text (Libre Bas
 
 ## Colors
 Navy background (about #01142D), red (#E8102E range), white text.
+
+## Automation: stamp.py
+Adds the header (current month filled in) and the footer to an article body image.
+
+    pip install pillow
+    python stamp.py body.png                       # writes body_final.png
+    python stamp.py body.png --date "December 2026" -o article.png
+
+The body image is the article without header and footer (headline, subhead, photo, text). Header and footer are scaled to its width. The date is shrunk automatically if it is too long.
+
+## Using it from an LLM
+- Claude Code or any coding agent: clone this repo and run stamp.py. No pasting.
+- Chat tools without code execution: give the raw URLs above and attach the body image. They cannot run the script.
