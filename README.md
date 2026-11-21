@@ -30,3 +30,6 @@ The body image is the article without header and footer (headline, subhead, phot
 ## Using it from an LLM
 - Claude Code or any coding agent: clone this repo and run stamp.py. No pasting.
 - Chat tools without code execution: give the raw URLs above and attach the body image. They cannot run the script.
+
+## One-command article
+`make_article.py` generates the body with an image API (OpenAI by default, Gemini with `--provider gemini`), then adds the header and footer. Needs an API key in `.env` (`OPENAI_API_KEY=...`). `CLAUDE.md`, `AGENTS.md` and `GEMINI.md` tell Claude Code, Codex and Gemini CLI how to run it when asked for a Parody Pulse article.
